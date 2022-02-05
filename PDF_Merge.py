@@ -1,17 +1,20 @@
 import os
-import sys
 from PyPDF2 import PdfFileMerger as PfM
 
 
-def pdf_merger():
-    pdfs = ['pdf1.pdf', 'pdf2.pdf']
+def pdf_merger(dir):
+    pdfs = [f'{dir}/pdf1.pdf', f'{dir}/pdf2.pdf']
     merger = PfM()
     for pdf in pdfs:
         merger.append(pdf)
-    merger.write("result.pdf")
+    merger.write(f"{dir}.pdf")
     merger.close
 
 
 if __name__ == '__main__':
     listed_directories = os.walk('.', False)
-    print([x[0] for x in listed_directories])
+    dirs = [x[0] for x in listed_directories]
+    for directory in dirs:
+        if directory == ".":
+            continue
+        pdf_merger(f'{directory}')
