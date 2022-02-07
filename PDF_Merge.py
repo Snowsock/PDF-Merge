@@ -3,7 +3,7 @@ from PyPDF2 import PdfFileMerger as PfM
 
 
 def pdf_merger(dir):
-    pdfs = [f'{dir}/pdf1.pdf', f'{dir}/pdf2.pdf']
+    pdfs = [f'{dir}/1.pdf', f'{dir}/2.pdf']
     merger = PfM()
     for pdf in pdfs:
         merger.append(pdf)
