@@ -20,6 +20,6 @@ for å kjøre skriptet, legg skriptet i rotmappen der du ønsker å samle pdf.
 
 Åpne rotmappen i et terminalvindu.
 
->python PDF_Merge.py
+`python PDF_Merge.py`
 
 
