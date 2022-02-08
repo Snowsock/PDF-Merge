@@ -1,14 +1,26 @@
-import os
+import os.path
 from PyPDF2 import PdfFileMerger as PfM
 
 
 def pdf_merger(dir):
-    pdfs = [f'{dir}/1.pdf', f'{dir}/2.pdf']
+    pdfs = check_for_file(dir)
     merger = PfM()
     for pdf in pdfs:
         merger.append(pdf)
     merger.write(f"{dir}.pdf")
     merger.close
+
+
+def check_for_file(directory_of_pdf):
+    file_list = []
+    i = 0
+    while True:
+        i+1
+        if os.path.isfile(f'{directory_of_pdf}/{i}.pdf'):
+            file_list.append(f'{directory_of_pdf}/{i}.pdf')
+        else:
+            break
+    return file_list
 
 
 if __name__ == '__main__':
