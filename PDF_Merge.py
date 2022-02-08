@@ -4,7 +4,6 @@ from PyPDF2 import PdfFileMerger as PfM
 
 def pdf_merger(dir):
     pdfs = check_for_file(dir)
-    print(pdfs)
     merger = PfM()
     for pdf in pdfs:
         merger.append(pdf)
@@ -15,15 +14,11 @@ def pdf_merger(dir):
 def check_for_file(directory_of_pdf):
     file_list = []
     i = 0
-    run = True
-    while run == True:
+    while True:
         i = i +1
-        print(i)
         if os.path.isfile(f'{directory_of_pdf}/{i}.pdf'):
-            print(f'{directory_of_pdf}/{i}.pdf')
             file_list.append(f'{directory_of_pdf}/{i}.pdf')
         else:
-            run = False
             return file_list
 
 
