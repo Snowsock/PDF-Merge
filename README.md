@@ -13,7 +13,7 @@ For å bruke skriptet må en ha Python3 på maskinen.
 ##sett inn lenke til python3 her
 
 En må også ha PyPDF2 installert på maskinen, dette gjør en ved å skrive 
-'code' pip install PyPDF2 'code' 
+`pip install PyPDF2` 
 i terminalen
 
 for å kjøre skriptet, legg skriptet i rotmappen der du ønsker å samle pdf.
