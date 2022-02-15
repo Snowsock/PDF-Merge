@@ -22,10 +22,14 @@ def check_for_file(directory_of_pdf):
             return file_list
 
 
-if __name__ == '__main__':
+def main():
     listed_directories = os.walk('.', False)
     dirs = [x[0] for x in listed_directories]
     for directory in dirs:
         if directory == ".":
             continue
         pdf_merger(f'{directory}')
+
+
+if __name__ == '__main__':
+    main()
